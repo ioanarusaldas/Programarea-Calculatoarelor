@@ -1,0 +1,46 @@
+Se citesc N tupluri (nume, prenume, vârstă). Să se sorteze crescător după
+nume, în caz de egalitate descrescător după prenume și în caz de egalitate
+crescător după vârstă. Numele și prenumele sunt șiruri de caractere de lungime
+maxim 30 ce nu conțin spații.
+
+
+INPUT						OUTPUT
+5						Angelescu Pavel 20
+Popescu Ion 40					Dumitru George 50
+Popescu Ion 30					Popescu Maria 55
+Popescu Maria 55				Popescu Ion 30
+Dumitru George 50				Popescu Ion 40
+Angelescu Pavel 20
+
+
+
+Să se implementeze o structură de date de tip stivă (pentru șiruri de
+   caractere):
+
+	struct deque {
+		int top;
+		char elements[1000][31];
+	};
+
+Operațiile pe această stivă vor fi:
+* pop - șterge elementul din vârful stivei (dacă stiva este goala atunci nu se
+	întâmplă nimic);
+* push cuv - adaugă cuvântul în vârful stivei;
+* print - afișează elementele stivei începând cu cel mai vechi adăugat.
+
+Cuvintele citite nu vor conține spatii (doar caractere alfanumerice) și vor avea
+lungimea maximă 30. Numărul maxim de operații citite este 1500.
+
+
+INPUT							OUTPUT
+9							
+print							mere 
+push mere						mere banane 
+print							mere 
+push banane						
+print
+pop
+print
+pop
+print
+

@@ -1,0 +1,6 @@
+Sa se inverseze elementele unui vector utilizand o parcurgere cu 2 pointeri (unul de la inceput si unul de la final).
+ 
+ void reverse(int *v1, int n);Ex: [1, 2, 3, 4, 5], n = 5 -> [5, 4, 3, 2, 1] Nu se va permite accesul elementelor folosind operatorul [].
+
+Sa se scrie o functie care are urmatoarea declaratie: 
+void filter (int (*f) (int), int *v, int *n). Functia trebuie sa modifice vectorul v, pastrand in vector doar elementele pentru care f intoarce “Adevarat” (il codificati cum doriti). n reprezinta lungimea vectorului si se va modifica dupa apelul functiei la noua dimensiune a vectorului. Va trebui sa se scrie si o functie f pentru a testa functionalitatea (de exemplu sa verifice daca un element este par sau nu -> int isEven(int x) ).

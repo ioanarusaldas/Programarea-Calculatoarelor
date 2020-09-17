@@ -1,0 +1,12 @@
+﻿1. Scrieti o functie cu numar variabil de parametri care determina parametrul cu frecventa de aparitie maxima. Daca sunt 2 parametrii cu aceesi frecventa, atunci se va afisa cel cu valoarea cea mai mica. Parametrii vor fi 'cititi' pana la intalnirea unei valori negative (nu trebuie luata in considerare)"|"
+Ex:
+
+Trebuie sa existe in program o functie care primeste un numar variabil de parametrii (o vom numi f), iar in main studentii pot scrie:
+f(1,1,2,1,2,-1) --> se va afisa 1
+f(1,1,2,2,-4) --> se va afisa 1 deoarece 1 < 2
+f(3,2,1,3,-100) --> se va afisa 3
+
+
+2.Sa se implementeze o functie calculus, cu numar variabil de parametrii. calculus(succesiune de {+, -, /, *}, …) - functia va trebui sa realizeze operatia matematica descrisa de succesiunea de operatori intre care se insereaza parametrii urmatori ai functiei (int-uri)."|"
+Ex: calculus("+-//", 1, 2, 10, 4, 2) --> 1 + 2 - 10 / 4 / 2 = 1 + 2 - 2 / 2 = 3 - 1 = 2
+(se va dori doar afisarea rezultatului final)

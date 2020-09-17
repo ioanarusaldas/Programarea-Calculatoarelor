@@ -1,0 +1,31 @@
+Implementati operatia void push_back(int **v , int *len, int *capacity,  int nr) care insereaza nr la finalul vectorului v. Daca vectorul este plin, realocati un vector cu dimensiune de 2 ori mai mare.
+
+
+Ex:
+ [] push_back(..., 6) => [6] push_back(..., 7) => [6, 7]  push_back(..., 8) => [6,7, _, _ ] => … => [6, 7, 8, 9] push_back(..., 1) => [6, 7, 8, 9, 1, _, _, _, ] etc
+
+
+Inmultiti doua matrici triunghiulare (una inferior triunghiulara si cealalta superior triunghiulara) si intoarceti matricea rezultatat (matricile sunt patratice si vor fi alocate dinamic) - matricele se vor tine in memorie intr-un mod eficient.
+
+    int **multiply_mat(int **mat1, int **mat2, int n)
+
+Alocati o zona de memorie care sa aiba n * n elemente (n citit de la tastatura), iar aceste elemente vor fi de la [1 la n * n]. Considerati aceasta zona de memorie o matrice liniarizata. Afisati matricea pe coloane. (Trebuie alocat un vector de pointeri, iar fiecare pointer va contine adresa de start a liniei)
+
+Ex:
+      m1 = [[1, 0, 0],            m2 = [[1, 2, 3],
+            [2, 3, 0],                  [0, 4, 5],  
+            [4, 5, 6]]                  [0, 0, 6]]
+
+    Atentie la reprezentarea interna a celor 2 matrice.
+    m1 * m2 = [[1, 2, 3],
+               [2, 16, 21],
+               [4, 28, 73]]
+
+    Ex:
+       n  = 3
+       v = [1,2,3, 4, 5, 6, 7, 8, 9]
+       a = [[1,2,3],
+            [4, 5, 6],
+            [7, 8, 9]]
+    Output: 1, 4, 7, 2, 5, 8, 3, 6, 9
+

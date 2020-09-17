@@ -1,0 +1,23 @@
+Sa citeste un numar natural N (1 <= N <= 50) urmat de N cuvinte cu lungimea
+cel mult 50. Sa se sorteze cuvintele in ordine lexicografica.
+
+
+INPUT:						OUTPUT
+4						Ana
+are						are
+Ana						banane
+mere						mere
+banane
+
+
+Se citeste de la tastatura o propozitie (cuvinte separate prin unul sau mai
+multe spatii, tab-uri). Sa se afiseze cea mai lunga pereche de cuvinte care
+rimeaza. Doua cuvinte rimeaza daca ultimele 2 caractere sunt egale. Lungime
+ unei perechi de cuvinte este lungimea primului cuvant + lungimea celui
+de-al doilea cuvant. Se va afisa mai intai cuvantul minim lexicografic din
+pereche. Se garanteaza ca nu exista mai multe perechi de cuvinte care rimeaza
+cu lungime maxima (output-ul este unic).
+
+
+INPUT							OUTPUT
+Toti in noaptea de Ajun se prefac ca sunt Mos Craciun.	Ajun Craciun
