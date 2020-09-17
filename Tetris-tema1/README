@@ -2,27 +2,36 @@ Nume: Savu Ioana Rusalda
 Grupa: 315CB
 
 	Pe liniile 6-23 este scrisa functia de afisare a hartii. Cu un for de la
-63 la 0  si cu o maska de 1 shiftata se parcurge fiecare bit al hartii. In urma operatiei binare,se completeaza harata cu "#" si ".".
+63 la 0  si cu o maska de 1 shiftata se parcurge fiecare bit al hartii. In urma operatiei binare,
+se completeaza harata cu "#" si ".".
 La fiecare 8 biti se trece pe randul urmator.
 
 	Pe liniile 26-29 este scrisa  functia de coborare a piesei prin shiftare
 cu 8*nr de randuri cu care trebuie sa fie shiftata piesa pana ajunge la pozitia dorita.
 
 	Pe liniile 31-38 este scrisa functia de coliziune cu peretele din dreapta.
-Linia 34 face comparatia intre piesa si o maska ce contine un numar de 16 biti dintre care al 7-lea si al 15-lea bit sunt de 1(numaratoarea incepand de la 0).
+Linia 34 face comparatia intre piesa si o maska ce contine un numar de 16 biti dintre care 
+al 7-lea si al 15-lea bit sunt de 1(numaratoarea incepand de la 0).
 
 	Pe liniile 40-47 este scrisa functia de coliziune cu peretele din stanga.
-Linia 43 face comparatia intre piesa si o maska ce contine un numar de 16 biti dintre care bitul 0 si al 8-lea bit sunt de 1(numaratoarea incepand de la 0).
+Linia 43 face comparatia intre piesa si o maska ce contine un numar de 16 biti dintre care 
+bitul 0 si al 8-lea bit sunt de 1(numaratoarea incepand de la 0).
 
 	Pe liniile 48-53 este scrisa functia de coliziune cu harta. Linia 50 face
 comparatia dintre harta si piesa prin operatia binara &.(1&1=1,1&0=0).
 
 	Pe liniile 55-65 este scrisa functia de stergere a unei linii
-complete.Variabila "up" memoreaza liniile din harta care se afla deasupra liniei ce trebuie eliminata,iar variabila "down" memoreaza liniile din harta care se afla sub linia ce trebuie eliminata.Memorarea se face prin shiftare pana ce in harta raman doar liniile care corespund lui up ,respectiv lui down.Pozition memoreaza numarul liniei care trebuie eliminata.Functia returneaza harta finala prin asamblarea celor 2 componente up si down si adaugarea unei linii goale.
+complete.Variabila "up" memoreaza liniile din harta care se afla deasupra liniei ce trebuie 
+eliminata,iar variabila "down" memoreaza liniile din harta care se afla sub linia ce trebuie 
+eliminata.Memorarea se face prin shiftare pana ce in harta raman doar liniile care corespund 
+lui up ,respectiv lui down.Pozition memoreaza numarul liniei care trebuie eliminata.
+Functia returneaza harta finala prin asamblarea celor 2 componente up si down si adaugarea 
+unei linii goale.
 
 	Pe liniile 68-73 este scrisa functia care calculeaza scorul. "zeroNr"
-reprezinta numarul de zerouri din harta finala ,iar completedLine reprezinta numarul de linii complete. Scorul este declarat de tip float si este calculat cu formuala matematica din cerinta pentru care am folosit biblioteca speciala 
-<math.h>.
+reprezinta numarul de zerouri din harta finala ,iar completedLine reprezinta numarul de linii 
+complete. Scorul este declarat de tip float si este calculat cu formuala matematica din cerinta 
+pentru care am folosit biblioteca speciala <math.h>.
 
 	Pe liniile 77-80 sunt declarate variabilele folosite in program.
 
@@ -30,20 +39,28 @@ reprezinta numarul de zerouri din harta finala ,iar completedLine reprezinta num
 citeste numarul de piese.
 
 	Pe linia 85 am parcurs piesele cu un for iar pentru fiecare piesa am
-parcurs cele 8 mutari. Am inceput apoi prin memorarea pozitiei piesei mutata in jos cu functia movedown.
+parcurs cele 8 mutari. Am inceput apoi prin memorarea pozitiei piesei mutata in jos cu 
+functia movedown.
 
 	Pe linia 103 am verificat daca se produce coliziune cu ajutorul functiei
-aferente pentru a vedea daca piesa are loc sa coboare cu un rand mai jos. Astfel,daca nu se produce coliziune am trecut la mutarile pe directie orizontala.
+aferente pentru a vedea daca piesa are loc sa coboare cu un rand mai jos. Astfel,daca nu se produce 
+coliziune am trecut la mutarile pe directie orizontala.
 
 	Pe linia 105 am luat un for care sa ma ajute la shiftare . Acesta porneste
 de la   modulul mutarii pana la 1 pentru a shifta piesa cu cate un bit.
-Astfel, daca mutarea este pozitiva am verificat coliziunea la dreapta cu peretele si daca mutarea  era posibila am shiftat piesa. In caz contrar piesa a ramas neschimbata. La fel am procedat si pentru cazul in care mutarea era negativa.
+Astfel, daca mutarea este pozitiva am verificat coliziunea la dreapta cu peretele si daca mutarea  
+era posibila am shiftat piesa. In caz contrar piesa a ramas neschimbata. La fel am procedat si 
+pentru cazul in care mutarea era negativa.
 
 	Pe linia 127 am coborat piesa nou shiftata cu inca un rand. Iar pe liniile
-129-132 am verificat coliziunea cu harta.In cazul in care s-a produs coliziune am iesit din for-ul pentru shiftare cu ajutorul unui "break".
+129-132 am verificat coliziunea cu harta.In cazul in care s-a produs coliziune am iesit 
+din for-ul pentru shiftare cu ajutorul unui "break".
 
 	Pe linia 141 am verificat inca o data coliziunea cu harta (pentru piesa
-nou shiftata) si am printat harta in cazul in care nu se producea coliziune.In caz contrar, am retinut pozitia liniei pe care s-a produs coliziunea si pozitia liniei precedente intr-o variabila skip care ma ajuta sa citesc in continuare mutarile fara a le executa si am iesit din for-ul pentru mutari cu ajutorul unui break.
+nou shiftata) si am printat harta in cazul in care nu se producea coliziune.In caz contrar, 
+am retinut pozitia liniei pe care s-a produs coliziunea si pozitia liniei precedente 
+intr-o variabila skip care ma ajuta sa citesc in continuare mutarile fara a le executa 
+si am iesit din for-ul pentru mutari cu ajutorul unui break.
 
 	Algoritmul care citeste in continuare mutarile fara a le
 realiza,ajutandu-se de variabila "skip" se afla pe liniile 87-95.
