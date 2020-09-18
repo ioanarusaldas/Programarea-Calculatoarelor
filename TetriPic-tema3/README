@@ -1,44 +1,42 @@
 SAVU IOANA RUSALDA 
 315 CB
 
-Atat task1.c cat si task2.c au fost create pe acelasi principiu.
+	Atat task1.c cat si task2.c au fost create pe acelasi principiu.
 Functia create_bmp seteaza campurile din header pentru a genera imaginea.
 Functiile pentru culori(ex: yellow,orange,pink..) coloreaza fiecare pixel in 
 functie de codul RGB.
 
-Apoi se gasesc functiile care genereaza piesele(o functie pentru fiecare piesa).
-Cu ajutorul variabilei offset se "simuleaza" o matrice pentru a accesa mai usor
-fiecare pixel din "pixelbuffer".
+	Apoi se gasesc functiile care genereaza piesele(o functie pentru fiecare 
+piesa).Cu ajutorul variabilei offset se "simuleaza" o matrice pentru a accesa 
+mai usor fiecare pixel din "pixelbuffer".
 
-Cu primul for se parcurge inaltimea ,iar cu cel de-al doilea se parcurge latimea,
-pasul fiind de 3 pentru a accesa fiecare pixel,nu fiecare unitate.
+	Cu primul for se parcurge inaltimea ,iar cu cel de-al doilea se parcurge 
+latimea,pasul fiind de 3 pentru a accesa fiecare pixel,nu fiecare unitate.
 Offset este si el calculat pentru fiecare pixel.Dupa ce sunt setate extremitatile 
 prin conditiile din if se apeleaza functia de colorare avand ca argument offset-ul.
 Cu ajutorul if-uli selectez zona din matrice care urmeaza sa fie colorata cu o 
 anumita culoare iar cu "else" ce ramane sa fie coloat cu alb.
 
-In functia generate se deschide fisierul binar in care urmeaza sa fie scrisa 
-imaginea.
-Lungimea unei linii (line_size) se calculeaza astfel incat sa fie multiplu de 
-4 conformcerintei acestei teme,iar in variabila _pixelbytesize memoreaza 
-dimensiunea imaginii.
+	In functia generate se deschide fisierul binar in care urmeaza sa fie scrisa 
+imaginea.Lungimea unei linii (line_size) se calculeaza astfel incat sa fie 
+multiplu de 4 conform cerintei acestei teme,iar in variabila _pixelbytesize 
+memoreaza dimensiunea imaginii.
 
-Apoi se aloca memoria necesara hartii de pixeli si se initializeaza fieccare
+	Apoi se aloca memoria necesara hartii de pixeli si se initializeaza fieccare
 unitate cu 0,dar si memorie pentru pointer-ul ce urmeaza sa puncteze la adresa 
 hartii.
-Se apeleaza functia care genereaza imagine.
+	Se apeleaza functia care genereaza imagine.
 Apoi se deschide fisierul si cu ajutorul unui switch se apeleaza fiecare functie,
 pentru generarea tuturor pieselor.
 
-In final se scrie in fisier si matricea de pixeli ,se inchide fisierul si se 
-elibereaza memoria.
-In main se apeleaza functia de generare pentru fiecare piesa cu lungimea ,latimea
-si numele piesei.
+	In final se scrie in fisier si matricea de pixeli ,se inchide fisierul si se 
+elibereaza memoria.In main se apeleaza functia de generare pentru fiecare piesa 
+cu lungimea ,latimeasi numele piesei.
 
-In task3.c piesele sunt generate pe acelasi principiu dar fara bordura alba si in 
-functie de coloana de unde trebuie pozitionate.
+	In task3.c piesele sunt generate pe acelasi principiu dar fara bordura 
+alba si in functie de coloana de unde trebuie pozitionate.
 
-Scrierea in fisier ramane aceeasi la fel si setarea campurilor din header.
+	Scrierea in fisier ramane aceeasi la fel si setarea campurilor din header.
 
 
 
